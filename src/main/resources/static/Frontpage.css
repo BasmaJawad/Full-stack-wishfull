@@ -1,0 +1,220 @@
+body {
+    background-color: #f5f4f1;
+    font: normal 15px "Avenir Next";
+}
+p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+h1 { /*"Wishfull overskift" */
+    font-family: "Avenir Next";
+    font-weight: normal;
+    color: #130f11;
+    font-size: 45px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+h2 { /*  Welcome to Wishfull skift CSS */
+    font-weight: 300;
+    color: #130f11;
+    font-size: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h3 { /*  Heard Enough skift CSS   */
+    padding-top: 20px;
+    font-size: 30px;
+    color: #130f11;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h4 { /*  Features  skift CSS  */
+    font-size: 24px;
+    color: #130f11;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+h5 { /*  FOOTER skift CSS */
+    font-size: 15px;
+    color: #130f11;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+#img-logo{
+    float: left;
+    alignment: left;
+    margin-top: 18px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #130f11;
+}
+a:hover {
+    color: #1b227b;
+}
+strong {
+    font-weight: bold;
+}
+small {
+    font-size: 13px;
+    color: #130f11;
+    font-style: italic;
+}
+.clear {
+    clear: both;
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 1000px;
+}
+header {
+    height: 120px;
+}
+header h1 {
+    float: left;
+    margin-top: 28px;
+
+}
+header h1 .color {
+    color: #1b227b;
+}
+
+header nav {
+    float: right;
+}
+header nav ul li {
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+}
+header nav ul li a {
+    color: #130f11;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-right: 20px;
+}
+
+/*  WISHFULL */
+
+#img-front {
+    height: 580px;
+    padding-top: 1px;
+    margin: 0 auto 20px auto;
+}
+#img-front h2 {
+    margin: 180px 0 40px 0;
+}
+
+
+.button-1 {
+    display: block;
+    text-align: center;
+    background: #1b227b;
+    border-radius: 3px;
+    color: #fff;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.button-1:hover {
+    background-color: #4e5ebd;
+    color: #fff;
+}
+
+
+
+
+/*  FOOTER CSS   */
+footer {
+    background-color: #f8fafa;
+    padding: 0;
+
+
+}
+#footer-info {
+    width: 380px;
+    float: left;
+    margin-top: 10px;
+
+}
+#footer-links {
+    width: 520px;
+    float: right;
+}
+#footer-links ul {
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+}
+#footer-links ul li {
+    margin: 10px 0;
+}
+
+/* HOW TO - FEATURES */
+#features ul {
+    margin: 80px 0;
+}
+#features ul li {
+    padding-bottom: 170px;
+    width: 300px;
+    padding-top: 140px;
+    float: left;
+    text-align: center;
+}
+#features ul li.feature-1 {
+    background: url('../static/pick.png') no-repeat top center;
+}
+#features ul li.feature-2 {
+    background: url('../static/wish-list1.png') no-repeat top center;
+}
+#features ul li.feature-3 {
+    background: url('../static/share.png') no-repeat top center;
+}
+
+
+
+
+
+/* mere og last Action CSS  */
+
+#HeardEnough {
+    padding-bottom: 100px;
+    text-align: center;
+}
+#HeardEnough h3 {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 400px;
+    border-bottom: 2px solid #5699d3;
+    padding: 0 0 20px 0;
+    font-weight: normal;
+}
+.button-2 {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #5699d3;
+    color: #5699d3;
+    border-radius: 3px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+}
+.button-2:hover {
+    background-color: #5699d3;
+    color: #fff;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="AllWishlists.css">
+    <link rel="stylesheet" href="AddWishlistPopup.css">
+    <title>Wishfull</title>
+</head>
+
+<body>
+<header>
+    <div class="wrapper">
+        <h1>Wishfull<span class="color">.</span></h1>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Wishlists</a></li>
+                <li><a href="/">Profile</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="line-1"></div>
+<div class="line-2"></div>
+
+<div class="wrapper">
+
+    <h2>Your wishlists</h2>
+
+    <button> + New wishlist</button>
+    <br>
+
+    <div onclick="window.location='/';" class="card">
+        <div class="cardLogo">
+            <img src="logo.png" alt="Logo" width="150px">
+        </div>
+        <h3>Title</h3>
+    </div>
+
+    <div onclick="window.location='/';" class="card">
+        <div class="cardLogo">
+            <img src="logo.png" alt="Logo" width="150px">
+        </div>
+        <h3>Title</h3>
+    </div>
+
+    <div onclick="window.location='/';" class="card">
+        <div class="cardLogo">
+            <img src="logo.png" alt="Logo" width="150px">
+        </div>
+        <h3>Title</h3>
+    </div>
+    <div onclick="window.location='/';" class="card">
+        <div class="cardLogo">
+            <img src="logo.png" alt="Logo" width="150px">
+        </div>
+        <h3>Title</h3>
+    </div>
+
+
+</div>
+
+
+<!-- popup -->
+
+<div class="bg">
+    <div class="popup-box">
+        <img src="list.png" width="100px">
+        <p id="newList">New Wishlist</p>
+
+        <div class="close">
+            <a href="/wishlists">+</a>
+        </div>
+
+        <form action="">
+            <input type="text" placeholder="Title">
+            <br>
+            <br>
+            <br>
+            <a href="/wishlists" class="CreateButton">Create</a>
+
+
+        </form>
+    </div>
+
+
+</div>
+</body>
+</html>

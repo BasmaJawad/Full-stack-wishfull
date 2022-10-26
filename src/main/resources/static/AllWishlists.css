@@ -1,0 +1,85 @@
+
+button {
+    border-radius: 10px;
+    border: 1px solid #bfaaaf ;
+    background-color: #bfaaaf ;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+    margin-top: 30px;
+
+}
+button:hover{
+    background-color: #4e5ebd;
+}
+
+h2 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.card {
+    float: left;
+    margin-right: 35px;
+
+
+    position: relative;
+    border-radius: 10px;
+    width: 22%;
+    height: 220px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    background: -webkit-linear-gradient(to right, #1b227b, #4e5ebd);
+    background: linear-gradient(to right, #1b227b, #4e5ebd);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.card:hover {
+    transition:0.3s;
+    transform: scaleY(1.1);
+    transform-origin: center;
+}
+
+h3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.cardLogo{
+    opacity: 0.2;
+
+}
+
+/*
+.line-1 {
+    height: 3px;
+    background: black;
+}
+.line-2{
+    top: 30px;
+    height: 3px;
+    background: black;
+    transform: rotate(90deg);
+}
+
+ */
+
+
+
+
