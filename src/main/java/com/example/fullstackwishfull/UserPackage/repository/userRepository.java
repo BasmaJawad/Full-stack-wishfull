@@ -45,12 +45,15 @@ public class userRepository {
 
     //opretter en ny user
     //instanser af user oprettes i service
+    //når der oprettes en user, skal der også oprettes en wishlist med samme userID
     public void create(User user)  {
 
         try {
-            PreparedStatement psts = conn.prepareStatement("INSERT INTO wishfulldb.users (email, password) VALUES (?,?)");
-            psts.setString(1, user.getEmail());
-            psts.setString(2, user.getPassword());
+            PreparedStatement psts = conn.prepareStatement("INSERT INTO wishfulldb.users (firstName, email, password, userID) VALUES (?,?,?,?)");
+            psts.setString(1, user.getFirstname());
+            psts.setString(2, user.getEmail());
+            psts.setString(3, user.getPassword());
+            psts.setInt(4, user.getUserID());
             psts.executeUpdate();
 
         } catch (SQLException e) {

@@ -12,6 +12,13 @@ public class User {
     private int userID;
 
     //Der skal creates en tabel i databsen, hvergang der creates en ny bruger
+
+    public User(String firstname, String email, String password, int id){
+        this.firstname = firstname;
+        this.email = email;
+        this.password = password;
+        this.userID = id;
+    }
     public User(String firstname, String surname, String email, String password, String birthday, String phoneNumber, int id) {
         this.firstname = firstname;
         this.surname = surname;
