@@ -28,4 +28,19 @@ public class userService {
         userRepo.create(user);
     }
 
-}
+
+
+  public void findUser( WebRequest req){
+
+    for (User user : allusers()){
+    if (req.getParameter("email").equals(user.getEmail()) &&
+        req.getParameter("password").equals(user.getPassword()))
+      System.out.println("true");
+  }
+
+
+
+
+
+
+}}

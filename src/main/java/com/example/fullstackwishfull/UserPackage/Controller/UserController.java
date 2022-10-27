@@ -2,6 +2,7 @@ package com.example.fullstackwishfull.UserPackage.Controller;
 
 
 import com.example.fullstackwishfull.UserPackage.service.userService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,13 @@ public class UserController {
     @GetMapping("/login")
     public String login(){
         return "Login";
+    }
+
+    @PostMapping ("/login")
+    public String userValidate(WebRequest req){
+        uService.findUser(req);
+
+        return "redirect:/profile";
     }
 
 
