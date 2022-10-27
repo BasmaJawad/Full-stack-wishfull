@@ -5,7 +5,8 @@ import java.util.List;
 
 public class WishList {
 
-   private int wishListID; //samme som userID
+   private int wishListID;
+   private String wishListTitle;
 
-   private List<Wish> wishlist = new ArrayList<>();
+
 }

@@ -1,8 +1,9 @@
-CREATE TABLE IF NOT EXISTS `1000` (
+CREATE TABLE IF NOT EXISTS `allwishes` (
 
+    userID int,
     wishListID int,
-    wishlistTitle  VARCHAR(100),
-    wishTitle VARCHAR(100),
+    wishListTitle  VARCHAR(100),
+    wishName VARCHAR(100),
     price int,
     link VARCHAR(500),
     description  VARCHAR(500)
@@ -10,7 +11,6 @@ CREATE TABLE IF NOT EXISTS `1000` (
 
 );
 
-INSERT INTO `1000`(wishListID, wishlistTitle, wishTitle, price, link, description)
-VALUES (1,'Birthday', 'Sko', 300,'https://www.aboutyou.dk/p/adidas-originals/sneaker-low-superstar-4545567', 'Sko jeg har ønsket mig i lang tid');
+INSERT INTO `allwishes`(userID, wishListID, wishlistTitle, wishName, price, link, description)
+VALUES (1000, 1,'Birthday', 'Sko', 300,'https://www.aboutyou.dk/p/adidas-originals/sneaker-low-superstar-4545567', 'Sko jeg har ønsket mig i lang tid');
 
-SELECT * FROM `1000`;

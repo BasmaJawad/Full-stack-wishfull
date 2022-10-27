@@ -2,10 +2,16 @@ package com.example.fullstackwishfull.WishPackage.model;
 
 public class Wish {
 
-    private int wishID;
-    private String wishTitle;
+    private int userID;
+    private int wishListID;
+    private String wishListTitle;
+    private String wishName;
+    private int price;
     private String link;
     private String description;
-    private int price;
-
 }
+
+
+
+
+
