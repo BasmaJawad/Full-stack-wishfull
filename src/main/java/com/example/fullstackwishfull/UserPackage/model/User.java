@@ -8,9 +8,9 @@ public class User {
     private String password;
     private String birthday;
     private String phoneNumber;
-    private int userID;
+    private static int userID;
 
-    //Der skal creates en tabel i databsen, hvergang der creates en ny bruger
+    //Der skal creates en tabel i databasen, hver gang der creates en ny bruger
 
     public User(String firstname, String email, String password, int id){
         this.firstname = firstname;
@@ -81,7 +81,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getUserID() {
+    public static int getUserID() {
         return userID;
     }
 

@@ -3,7 +3,7 @@ package com.example.fullstackwishfull.WishPackage.repository;
 import com.example.fullstackwishfull.DatabaseConnectionManager;
 import com.example.fullstackwishfull.UserPackage.model.User;
 import com.example.fullstackwishfull.WishPackage.model.Wish;
-import com.example.fullstackwishfull.WishPackage.model.WishList;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,17 +25,18 @@ public class wishRepository {
         List<Wish> wishes = new ArrayList<>();
 
         try {
-            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.users");
+            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes");
             ResultSet resultSet = psts.executeQuery();
 
             while(resultSet.next()){
                 wishes.add(new Wish(
                         resultSet.getInt("userID"),
-                        resultSet.getInt("wishID"),
+                        resultSet.getInt("wishListID"),
+                        resultSet.getString("wishlistTitle"),
                         resultSet.getString("wishName"),
-                        resultSet.getInt("wish"),
-
-                ));
+                        resultSet.getString("price"),
+                        resultSet.getString("link"),
+                        resultSet.getString("description")));
             }
 
         } catch (SQLException e) {
@@ -45,17 +46,20 @@ public class wishRepository {
         return wishes;
     }
 
-    //opretter en ny user
-    //instanser af user oprettes i service
-    //når der oprettes en user, skal der også oprettes en wishlist med samme userID
-    public void create(User user)  {
+    //opretter en ny wish
+    //instanser af wish oprettes i service
+    public void create(Wish wish)  {
 
         try {
-            PreparedStatement psts = conn.prepareStatement("INSERT INTO wishfulldb.users (firstName, email, password, userID) VALUES (?,?,?,?)");
-            psts.setString(1, user.getFirstname());
-            psts.setString(2, user.getEmail());
-            psts.setString(3, user.getPassword());
-            psts.setInt(4, user.getUserID());
+            PreparedStatement psts = conn.prepareStatement("INSERT INTO wishfulldb.allwishes (userID, wishListID,wishlistTitle,wishName,price,link,description) VALUES (?,?,?,?,?,?,?)");
+            psts.setInt(1, User.getUserID());
+            psts.setInt(2, wish.getWishListID());
+            psts.setString(3, wish.getWishListTitle());
+            psts.setString(4, wish.getWishName());
+            psts.setString(5, wish.getPrice());
+            psts.setString(6, wish.getLink());
+            psts.setString(7, wish.getDescription());
+
             psts.executeUpdate();
 
         } catch (SQLException e) {

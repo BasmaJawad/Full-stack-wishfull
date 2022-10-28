@@ -23,9 +23,13 @@ public class UserController {
 
     @PostMapping ("/login")
     public String userValidate(WebRequest req, Model model){
-       String val= uService.findUser(req, model);
+       //String val= uService.findUser(req, model);
 
-        return val;
+        if(uService.findUser(req, model)==0)
+            return "Login";
+        else
+            return "Profile";
+
     }
 
     @GetMapping("/signup")
