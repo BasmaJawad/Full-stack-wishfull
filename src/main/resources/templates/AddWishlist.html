@@ -75,18 +75,17 @@
             <a href="/wishlists">+</a>
         </div>
 
-        <form action="">
-            <input type="text" placeholder="Title">
+        <form action="/addwishlist" method="post">
+            <label for ="title" ></label>
+            <input type="text" name="title" placeholder="Title" required>
             <br>
             <br>
             <br>
-            <a href="/wishlists" class="CreateButton">Create</a>
-
-
+            <button type="submit" class="CreateButton">Create</button>
         </form>
     </div>
 
 
-</div>
-</body>
+    </div>
+    </body>
 </html>
