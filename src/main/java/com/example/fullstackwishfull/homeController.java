@@ -31,7 +31,6 @@ public class homeController {
       return "Profile";
 
   }
-
   @GetMapping("/signup")
   public String signup() {
     return "SignUp";
@@ -52,8 +51,9 @@ public class homeController {
 
 
   @GetMapping("/wishlists")
-  public String viewWishlists() {
+  public String viewWishlists(Model model) {
 
+    //uService.getwService().sendTitle()
     return "AllWishlists";
   }
 
@@ -62,18 +62,18 @@ public class homeController {
     return "AddWishlist" ;
   }
 
-
-
   @PostMapping("/addwishlist")
   public String addWishList(WebRequest req, Model model) {
-    uService.getwService().createWishlist(req, model);
+
+    model.addAttribute("title", req.getParameter("title"));
+
+    uService.getwService().createWishlist(req);
+
     return "AllWishlists" ;
   }
 
   @GetMapping("/wishlist")
   public String viewWishlidt() {
-
-
 
     return "Wishlist";
   }

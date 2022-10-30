@@ -69,6 +69,8 @@ public class wishRepository {
 
     }
 
+
+    // Setter
     public void setNewWishlistTitle(String newWishlistTitle) {
         this.newWishlistTitle = newWishlistTitle;
     }

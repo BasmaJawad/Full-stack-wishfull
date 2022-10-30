@@ -50,7 +50,7 @@ public class userService {
       if (req.getParameter("email").equals(user.getEmail()) &&
               req.getParameter("password").equals(user.getPassword())) {
 
-        wService.findUserID(user.getUserID());
+        wService.findUserID(user.getUserID()); //ender id til wish service
 
         model.addAttribute("loggedUser", user);//sender user videre til html, ved navn loggedUser
 
