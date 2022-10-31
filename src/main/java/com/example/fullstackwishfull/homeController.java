@@ -63,6 +63,10 @@ public class homeController {
     model.addAttribute("wishlistTitle", req.getParameter("wishlistTitle"));
 
     System.out.println(req.getParameter("wishlistTitle"));
+
+    uService.getwService().userWishes(req.getParameter("wishlistTitle"));
+
+
     return "redirect:/wishlists"; //skal redirectes til wihlist
   }
 
@@ -82,7 +86,8 @@ public class homeController {
   }
 
   @GetMapping("/wishlist")
-  public String viewWishlidt() {
+  public String viewWishlist(WebRequest req) {
+
     return "Wishlist";
   }
 

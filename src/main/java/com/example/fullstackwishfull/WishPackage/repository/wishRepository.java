@@ -73,12 +73,12 @@ public class wishRepository {
 
     }
 
-    public List<Wish> findUserWishSQL(int uID , int wID  ) {
+    public List<Wish> findUserWishSQL(int uID , String wTitle  ) {
         List<Wish> userWishes = new ArrayList<>();
         try {
-            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID =? & wishListID =? ");
+            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID =? & wishlistTitle =? ");
             psts.setInt(1, uID);
-            psts.setInt(2, wID);
+            psts.setString(2, wTitle);
 
             ResultSet resultSet = psts.executeQuery();
 
