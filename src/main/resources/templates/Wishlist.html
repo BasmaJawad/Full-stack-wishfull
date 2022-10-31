@@ -29,14 +29,16 @@
     <button onclick="window.location='/addwish';"> + Add wish</button>
     <br>
 
-    <div onclick="window.location='/wishlist';" class="card">
+    <tr th:each="wishlist: ${wishlist}">
+
+    <!--<div onclick="window.location='/wishlist';" class="card">
         <div class="cardLogo">
             <img src="logo.png" alt="Logo" width="150px">
         </div>
         <div class="info-container">
             <h3>Title</h3>
         </div>
-    </div>
+    </div> -->
 
     <div onclick="window.location='/wishlist';" class="card">
         <div class="cardLogo">
@@ -45,18 +47,8 @@
         <h3>Title</h3>
     </div>
 
-    <div onclick="window.location='/wishlist';" class="card">
-        <div class="cardLogo">
-            <img src="logo.png" alt="Logo" width="150px">
-        </div>
-        <h3>Title</h3>
-    </div>
-    <div onclick="window.location='/wishlist';" class="card">
-        <div class="cardLogo">
-            <img src="logo.png" alt="Logo" width="150px">
-        </div>
-        <h3>Title</h3>
-    </div>
+
+
 
 
 </div>
