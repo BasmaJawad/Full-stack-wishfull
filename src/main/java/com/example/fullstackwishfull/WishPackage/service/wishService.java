@@ -6,6 +6,7 @@ import com.example.fullstackwishfull.WishPackage.repository.WishlistRepository;
 import com.example.fullstackwishfull.WishPackage.repository.wishRepository;
 import org.springframework.web.context.request.WebRequest;
 
+import java.util.Collections;
 import java.util.List;
 
 
@@ -13,6 +14,9 @@ public class wishService {
 
     private int userID;
     private int wishlistID;
+
+    private String wishlistTitle;
+
 
     private wishRepository wishRepo = new wishRepository();
     private WishlistRepository wishlistRepo = new WishlistRepository();
@@ -43,7 +47,7 @@ public class wishService {
         Wish wish = new Wish(
                 userID,
                 wishlistID,
-                //req.getParameter("wishlistTitle"),
+                wishlistTitle,
                 req.getParameter("title"),
                 req.getParameter("price"),
                 req.getParameter("link"),
@@ -70,16 +74,20 @@ public class wishService {
         return wishlistRepo.findUserWishListsSQL(userID);
     }
 
-    public List<Wish> userWishes(){
+    public List<Wish> userWishes(String wTitle){
         // den skal finde wishlist id efter at have fundet alle listerne for den givne bruger.
         // Når vi klikker på en titel, skal titlen samt wishlist idet gemmes.
-
-        return  wishRepo.findUserWishSQL(userID, wishlistID);
+        wishlistTitle = wTitle;
+        return  wishRepo.findUserWishSQL(userID, wishlistTitle);
     }
 
 
-    public void displayWishes(){
 
+
+
+    public void editWishlist(){
+
+        // Henter wishlist objekt og redigere det og sender det videre til databasen igen
 
 
     }
