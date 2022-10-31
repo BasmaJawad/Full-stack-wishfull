@@ -1,5 +1,6 @@
 package com.example.fullstackwishfull;
 import com.example.fullstackwishfull.UserPackage.service.userService;
+import com.example.fullstackwishfull.WishPackage.model.Wishlist;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,10 +53,12 @@ public class homeController {
 
   @GetMapping("/wishlists")
   public String viewWishlists(Model model) {
+    model.addAttribute("wishlists", uService.getwService().userWishlist());
 
-    //uService.getwService().sendTitle()
     return "AllWishlists";
   }
+
+
 
   @GetMapping ("/addwishlist")
     public String addWishlist(){
@@ -69,12 +72,11 @@ public class homeController {
 
     uService.getwService().createWishlist(req);
 
-    return "AllWishlists" ;
+    return "redirect:/wishlists";
   }
 
   @GetMapping("/wishlist")
   public String viewWishlidt() {
-
     return "Wishlist";
   }
 

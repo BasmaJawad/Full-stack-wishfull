@@ -10,3 +10,4 @@ CREATE TABLE IF NOT EXISTS allWishlists
 
 insert into allWishlists(userID, wishListID,  wishListTitle)
 VALUES (1000,1,'Birthday');
+

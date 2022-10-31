@@ -4,7 +4,6 @@ import com.example.fullstackwishfull.WishPackage.model.Wish;
 import com.example.fullstackwishfull.WishPackage.model.Wishlist;
 import com.example.fullstackwishfull.WishPackage.repository.WishlistRepository;
 import com.example.fullstackwishfull.WishPackage.repository.wishRepository;
-import org.springframework.ui.Model;
 import org.springframework.web.context.request.WebRequest;
 
 import java.util.List;
@@ -17,10 +16,6 @@ public class wishService {
 
     private wishRepository wishRepo = new wishRepository();
     private WishlistRepository wishlistRepo = new WishlistRepository();
-
-    public List<Wish> allwishes() {
-        return wishRepo.allWishes();
-    }
 
     // Vi får attibuten herovre, og sender den videre.
 
@@ -35,6 +30,8 @@ public class wishService {
                 req.getParameter("title"));
 
         wishlistRepo.create(wishlist);
+
+        generateID();
 
     }
 
@@ -58,10 +55,18 @@ public class wishService {
     public void findUserID(int id) {
         userID = id;
         generateID();
+
     }
 
-    public void generateID() { //udregner id til næste wishlist ved at tage size og paluser det med 1000 da den første id startede på 1000
+    public void generateID() {//udregner id til næste wishlist ved at tage size og paluser det med 1000 da den første id startede på 1000
 
-        wishlistID = wishlistRepo.userWishLists(userID).size() + 1;
+        wishlistID= userWishlist().size()+1;
+        //wishlistID = wishlistRepo.getUserWishlists().size()+1;
+
+        System.out.println("3 " + wishlistID);
+    }
+
+    public List<Wishlist> userWishlist(){ //metode der returnere wishlisten der tilhører brugeren. Bruges i controller
+        return wishlistRepo.findUserWishListsSQL(userID);
     }
 }

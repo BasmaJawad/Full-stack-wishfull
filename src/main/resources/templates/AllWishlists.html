@@ -35,8 +35,16 @@
     </h3>
     <button onclick="window.location='/addwishlist';"> + New wishlist</button>
     <br>
+    <tr th:each="wishlist: ${wishlists}">
 
-    <li th:text="${title}"></li>
+    <div onclick="window.location='/wishlist';" class="card">
+        <div class="cardLogo">
+            <img src="logo.png" alt="Logo" width="150px">
+        </div>
+        <h3><td th:text="${wishlist.wishListTitle}" /></h3>
+    </div>
+    </tr>
+
 
     <!-- <div onclick="window.location='/wishlist';" class="card">
          <div class="cardLogo">
