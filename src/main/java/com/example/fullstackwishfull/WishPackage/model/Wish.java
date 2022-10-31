@@ -44,7 +44,8 @@ public class Wish {
 
 
 
-    public int getUserID() {
+
+  public int getUserID() {
         return userID;
     }
 

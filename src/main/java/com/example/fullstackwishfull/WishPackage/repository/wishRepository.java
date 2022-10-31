@@ -3,6 +3,7 @@ package com.example.fullstackwishfull.WishPackage.repository;
 import com.example.fullstackwishfull.DatabaseConnectionManager;
 import com.example.fullstackwishfull.UserPackage.model.User;
 import com.example.fullstackwishfull.WishPackage.model.Wish;
+import com.example.fullstackwishfull.WishPackage.model.Wishlist;
 
 
 import java.sql.Connection;
@@ -20,6 +21,8 @@ public class wishRepository {
     private Connection conn = DatabaseConnectionManager.getConnection();
     private String newWishlistTitle;
 
+
+    // Læser fra database
     public List<Wish> allWishes(){
 
         //læser fra db
@@ -67,7 +70,36 @@ public class wishRepository {
             throw new RuntimeException(e);
         }
 
+
     }
+
+    public List<Wish> findUserWishSQL(int uID , int wID  ) {
+        List<Wish> userWishes = new ArrayList<>();
+        try {
+            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID =? & wishListID =? ");
+            psts.setInt(1, uID);
+            psts.setInt(2, wID);
+
+            ResultSet resultSet = psts.executeQuery();
+
+            while (resultSet.next()) {
+                userWishes.add(new Wish(
+                    resultSet.getInt("userID"),
+                    resultSet.getInt("wishListID"),
+                    resultSet.getString("wishlistTitle"),
+                    resultSet.getString("wishName"),
+                    resultSet.getString("price"),
+                    resultSet.getString("link"),
+                    resultSet.getString("description")));
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return userWishes;
+    }
+
 
 
     // Setter

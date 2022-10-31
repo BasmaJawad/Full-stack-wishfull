@@ -69,4 +69,18 @@ public class wishService {
     public List<Wishlist> userWishlist(){ //metode der returnere wishlisten der tilhører brugeren. Bruges i controller
         return wishlistRepo.findUserWishListsSQL(userID);
     }
+
+    public List<Wish> userWishes(){
+        // den skal finde wishlist id efter at have fundet alle listerne for den givne bruger.
+        // Når vi klikker på en titel, skal titlen samt wishlist idet gemmes.
+
+        return  wishRepo.findUserWishSQL(userID, wishlistID);
+    }
+
+
+    public void displayWishes(){
+
+
+
+    }
 }

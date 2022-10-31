@@ -76,7 +76,14 @@ public class homeController {
   }
 
   @GetMapping("/wishlist")
-  public String viewWishlidt() {
+  public String viewWishlidt(Model model) {
+
+    model.addAttribute("wishlistTitle", uService.getwService().
+
+
+
+
+
     return "Wishlist";
   }
 
