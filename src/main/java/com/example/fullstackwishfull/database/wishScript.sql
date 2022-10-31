@@ -13,3 +13,5 @@ CREATE TABLE IF NOT EXISTS `allwishes` (
 
 INSERT INTO `allwishes`(userID, wishListID, wishlistTitle, wishName, price, link, description)
 VALUES (1000, 1,'Birthday', 'Sko', 300,'https://www.aboutyou.dk/p/adidas-originals/sneaker-low-superstar-4545567', 'Sko jeg har ønsket mig i lang tid');
+
+DELETE from allwishes where wishListTitle IS NULL ;

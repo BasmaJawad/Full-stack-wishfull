@@ -19,7 +19,7 @@ public class wishRepository {
 
     //Connecter til db
     private Connection conn = DatabaseConnectionManager.getConnection();
-    private String newWishlistTitle;
+
 
 
     // Læser fra database
@@ -58,7 +58,7 @@ public class wishRepository {
             PreparedStatement psts = conn.prepareStatement("INSERT INTO wishfulldb.allwishes (userID, wishListID,wishlistTitle,wishName,price,link,description) VALUES (?,?,?,?,?,?,?)");
             psts.setInt(1, wish.getUserID());
             psts.setInt(2, wish.getWishListID());
-            psts.setString(3, newWishlistTitle);
+            psts.setString(3, wish.getWishListTitle());
             psts.setString(4, wish.getWishName());
             psts.setString(5, wish.getPrice());
             psts.setString(6, wish.getLink());
@@ -98,12 +98,5 @@ public class wishRepository {
         }
 
         return userWishes;
-    }
-
-
-
-    // Setter
-    public void setNewWishlistTitle(String newWishlistTitle) {
-        this.newWishlistTitle = newWishlistTitle;
     }
 }

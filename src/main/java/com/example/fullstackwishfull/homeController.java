@@ -67,7 +67,7 @@ public class homeController {
     uService.getwService().userWishes(req.getParameter("wishlistTitle"));
 
 
-    return "redirect:/wishlists"; //skal redirectes til wihlist
+    return "redirect:/wishlist"; //skal redirectes til wihlist
   }
 
   @GetMapping ("/addwishlist")
