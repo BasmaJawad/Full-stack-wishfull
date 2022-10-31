@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="menubar.css">
     <link rel="stylesheet" href="Wishlist.css">
-    <link rel="stylesheet" href="AddWishlistPopup.css">
+    <link rel="stylesheet" href="AddWishPopup.css">
     <title>Wishfull</title>
 
 </head>
@@ -25,23 +25,38 @@
 </header>
 
 <div class="bg">
-    <div class="popup-box">
-        <img src="gavebox.png" width="100px">
-        <p id="newList">New Wish</p>
 
-        <div class="close">
-            <a href="/wishlist">+</a>
+    <div class="popup-box">
+
+        <div class="box1">
+            <br><br><br><br>
+            <img src="gavebox.png" width="100px">
+            <p id="newList">You are adding a new wish!</p>
+
         </div>
 
-        <form action="">
-            <input type="text" placeholder="Title">
-            <br>
-            <br>
-            <br>
-            <a href="/wishlist" class="CreateButton">Add</a>
 
+        <div class="box2">
+            <div class="close">
+                <a href="/wishlist">+</a>
+            </div>
+            <br><br>
+            <form action="/addwish" method="post">
+                <label for="title"></label>
+                <input type="text" name="title" placeholder="Title" required>
 
-        </form>
+                <label for="description"></label>
+                <input type="text" name="description" placeholder="Description">
+
+                <label for="price"></label>
+                <input type="text" name="price" placeholder="Price">
+
+                <label for="link"></label>
+                <input type="text" name="link" placeholder="link">
+
+                <button type="submit" class="CreateButton">Create</button>
+            </form>
+        </div>
     </div>
 
 

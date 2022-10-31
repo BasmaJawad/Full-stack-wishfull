@@ -106,7 +106,7 @@ input {
     background-position: 0 0;
     color: #FFFFFF;
 
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

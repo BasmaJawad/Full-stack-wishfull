@@ -1,0 +1,82 @@
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    float: left;
+  color: black;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.box2{
+    background: -webkit-linear-gradient(to right, #2e387d   ,#4e5ebd);
+    background: linear-gradient(to right, #2e387d  , #4e5ebd  );
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.popup-box{
+    width: 700px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+
+}
+
+#newList{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+input{
+    width: 60%;
+    height: 40px;
+    display: block;
+    margin: 20px auto;
+    border-color: #1b227b;
+    border-radius: 5px;
+
+}
+
+.CreateButton{
+    border-radius: 5px;
+    background-color: #2e387d;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+
+.close{
+
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
