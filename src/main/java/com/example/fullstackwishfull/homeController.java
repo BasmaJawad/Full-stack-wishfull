@@ -32,6 +32,7 @@ public class homeController {
       return "Profile";
 
   }
+
   @GetMapping("/signup")
   public String signup() {
     return "SignUp";
@@ -62,13 +63,13 @@ public class homeController {
   public String viewWishlists(WebRequest req, Model model) {
     model.addAttribute("wishlistTitle", req.getParameter("wishlistTitle"));
 
-    System.out.println(req.getParameter("wishlistTitle"));
+
     return "redirect:/wishlists"; //skal redirectes til wihlist
   }
 
-  @GetMapping ("/addwishlist")
-    public String addWishlist(){
-    return "AddWishlist" ;
+  @GetMapping("/addwishlist")
+  public String addWishlist() {
+    return "AddWishlist";
   }
 
   @PostMapping("/addwishlist")
@@ -88,11 +89,19 @@ public class homeController {
 
 
   @GetMapping("/addwish")
-  public String addWish(WebRequest req) {
+  public String addWish() {
+    return "AddWish";
+  }
+
+  @PostMapping("/addwish")
+  public String addWish(WebRequest req, Model model) {
+    model.addAttribute("title", req.getParameter("title"));
+    model.addAttribute("description", req.getParameter("description"));
+    model.addAttribute("price", req.getParameter("price"));
+    model.addAttribute("link", req.getParameter("link"));
 
     uService.getwService().createWish(req);
-
-    return "AddWish";
+    return "redirect:/wishlist";
   }
 }
 

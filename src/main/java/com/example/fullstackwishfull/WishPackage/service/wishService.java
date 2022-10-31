@@ -44,7 +44,7 @@ public class wishService {
                 userID,
                 wishlistID,
                 //req.getParameter("wishlistTitle"),
-                req.getParameter("wishName"),
+                req.getParameter("title"),
                 req.getParameter("price"),
                 req.getParameter("link"),
                 req.getParameter("description"));
