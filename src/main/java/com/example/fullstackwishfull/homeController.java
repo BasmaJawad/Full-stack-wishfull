@@ -75,9 +75,7 @@ public class homeController {
   }
 
   @PostMapping("/addwishlist")
-  public String addWishList(WebRequest req, Model model) {
-
-    model.addAttribute("title", req.getParameter("title"));
+  public String addWishList(WebRequest req) {
 
     uService.getwService().createWishlist(req);
 
@@ -110,10 +108,19 @@ public class homeController {
     return "Wishlist";
   }
 
+  @PostMapping("/wishlist")
+  public String viewWishlist(WebRequest req){
+
+    uService.getwService().deleteWish(req);
+
+    return "wishlist";
+  }
+
   @GetMapping("/test")
   public String test(){
     return "test";
   }
+
 }
 
 

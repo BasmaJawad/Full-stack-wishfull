@@ -27,7 +27,7 @@ h2{
 button {
     border-radius: 10px;
     background-color: #bfaaaf;
-    border-color: #bfaaaf;
+    border-color: #FFFFFF;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -103,7 +103,13 @@ hr{
     opacity: 0.5;
 }
 
+.submitImg{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
 img{
     position: absolute;
-    top: 25px;
+    top: 20px;
 }

@@ -24,39 +24,41 @@
 </header>
 <div class="wrapper">
 
-    <h2><td th:text="${wishlistTitle}"/></h2>
+    <h2>
+        <td th:text="${wishlistTitle}"/>
+    </h2>
 
-    <button onclick="window.location='/addwish';"> + Add wish</button>
+    <button id ="add" onclick="window.location='/addwish';"> + Add wish</button>
     <br>
 
 
     <tr th:each="wish: ${wishlist}">
 
-        <!--<div onclick="window.location='/wishlist';" class="card">
-            <div class="cardLogo">
-                <img src="logo.png" alt="Logo" width="150px">
-            </div>
-            <div class="info-container">
-                <h3>Title</h3>
-            </div>
-        </div> -->
         <div class="card">
+            <form class="trash">
+                <input type="hidden" name="wishlistTitle" th:value="${wish.getWishListID}">
+                <input type="hidden" name="wishName" th:value="${wish.getWishName}">
+                <input type="image" class="submitImg" src="trashcan.png" width="30px">
+
+            </form>
+
             <img src="gavebox.png" alt="Logo" width="60px">
 
             <div class="info-container">
                 <h3>
                     <td th:text="${wish.getWishName}"/>
                 </h3>
-                <hr >
+                <hr>
                 <div class="text">
                     <td th:text="${wish.getDescription}"/>
                 </div>
                 <hr>
                 <div class="text">
-                    <td th:text="${wish.getPrice}"/> kr.
+                    <td th:text="${wish.getPrice}"/>
+                    kr.
                 </div>
                 <hr>
-                    <div class="text">
+                <div class="text">
                     <td th:text="${wish.getLink}"/>
                 </div>
                 <hr>
