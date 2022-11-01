@@ -82,6 +82,10 @@ public class wishService {
          this.wishlistTitle = wishlistTitle;
      }
 
+    public String getWishlistTitle() {
+        return wishlistTitle;
+    }
+
     public void editWishlist(){
 
         // Henter wishlist objekt og redigere det og sender det videre til databasen igen
