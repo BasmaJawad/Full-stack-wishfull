@@ -1,22 +1,127 @@
+body{}
+
+
 h2 {
     font-family: "Avenir Next";
 
 
+
 }
 
 h2 {
-    font-size: 300px;
+    margin-top: 80px;
+    font-size: 40px;
     margin-bottom: 10px;
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+    color: #1b227b;
+    letter-spacing: 2px;
+}
+
+body {
+    margin: 0;
+    padding-top: 40px;
+    color: #2e323c;
+    background: #f5f6fa;
+    position: relative;
+    height: 100%;
+}
+.container {
+
     float: left;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    position: center;
+    overflow: hidden;
+    width: 350px;
+    max-width: 100%;
+    min-height: 480px;
+    alignment: center;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    height: 657px;
+
+
+}
+
+.form-group{
+    background-color: #FFFFFF;
+    display: table;
+    align-items: normal;
+    flex-direction: column;
+    justify-content: center; left: 10px;
+    padding: 20px 50px;
+    height: 100%;
+    width: 100px;
+    alignment: right;
+    background: #2e387d;
+    background: -webkit-linear-gradient(to right, #2e387d  , #4e5ebd);
+    background: linear-gradient(to right, #2e387d  , #4e5ebd);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
 
 }
 
 
-#img-logo {
-    float: left;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+label{
     alignment: left;
-    margin-top: 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+
 }
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 200px;
+    border-radius: 20px;
+    display: table-column;
+    margin-outside: 10px;
+
+}
+button{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 70px;
+    float: bottom; alignment: center;
+    text-color: #2e387d;
+
+
+}
+#btn-primary{
+    border-color: #4e5ebd;
+
+}
+#btn-secondary{
+    border-color: gray;
+}
+
+
+
+
+
+
+
 
 
 

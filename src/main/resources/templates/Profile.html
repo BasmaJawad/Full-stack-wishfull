@@ -12,7 +12,6 @@
 
 <header>
     <div class="wrapper">
-        <img src="logo.png" id = "img-logo" width="50" height="60">
         <h1>Wishfull<span class="color">.</span></h1>
 
         <nav>
@@ -26,15 +25,51 @@
     </div>
 </header>
 
-<div class="line-1"></div>
-<div class="line-2"></div>
-<h2>HI THERE  <output th:text="${loggedUser.getFirstname}"></output> </h2>
 
+<div class = "wrapper">
 
-<h3></h3>
+    <div class="container" id="container2">
 
+    <h2>HI THERE <br> <output th:text="${loggedUser.getFirstname}"></output> ! <br>
+        Welcome to <br> your <br>
+        profile
+    </h2>
+    </div>
+
+    <div class="container">
+
+        <div class="form-group">
+
+            <label for="firstname"> Firstname</label>
+            <input type="text" class="form-control" id="firstname" th:value="${loggedUser.getFirstname}"><br>
+
+            <label for="surname">Surname</label>
+            <input type="text" class="form-control" id="surname" th:value="${loggedUser.getSurname}"><br>
+
+            <label for="eMail">Email</label>
+            <input type="email" class="form-control" id="eMail" th:value="${loggedUser.getEmail}"><br>
+
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" th:value="${loggedUser.getPhoneNumber}"><br>
+
+            <label for="birthday">Birthday</label>
+            <input type="text" class="form-control" id="birthday" th:value="${loggedUser.getBirthday}"><br>
+
+            <label>Current Password</label>
+            <input class="form-control" type="password" placeholder="••••••">
+
+            <label>New Password</label>
+            <input class="form-control" type="password" placeholder="••••••">
+
+            <button type="submit" id="btn btn-primary" >Update </button> <br>
+            <button type="submit" id="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+
+</div>
 
 <!--
+
 <li th:text="${loggedUser.getFirstname}"></li>
 <li th:text="${loggedUser.getSurname}"></li>
 <li th:text="${loggedUser.getEmail}"></li>
