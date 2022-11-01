@@ -62,4 +62,22 @@ public class userService {
     }
     return 0;
   }
+
+  public String updateUserPass(WebRequest req, Model model) {
+
+    for (User user : allusers()) {
+      if (req.getParameter("password").equals(user.getPassword())) {
+        String newPass = "";
+        user.setPassword(newPass);
+
+        return "Succes";
+  } else  {
+        return "FAIL";
+      }
+    }
+    return null;
+  }
+
+
 }
+

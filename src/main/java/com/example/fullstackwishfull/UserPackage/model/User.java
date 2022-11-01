@@ -24,7 +24,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.birthday = birthday;
-        this.phoneNumber = phoneNumber;
+        this.phoneNumber =phoneNumber;
         this.userID = id;
     }
 
@@ -33,6 +33,10 @@ public class User {
         this.email = email;
         this.password = password;
     }
+
+  public User() {
+
+  }
 
     public String getFirstname() {
         return firstname;

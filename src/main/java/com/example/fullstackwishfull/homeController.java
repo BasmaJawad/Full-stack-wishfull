@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.context.request.WebRequest;
 
 @Controller
@@ -49,6 +51,17 @@ public class homeController {
   public String profile() {
     return "Profile";
   }
+
+
+  @PostMapping("/profile")
+  public String editProfile(WebRequest req, Model model){
+    uService.updateUserPass(req, model);
+
+
+    return "Profile";
+  }
+
+
 
 // ALLE ØNSKELISTER PÅ DISPLAY
   @GetMapping("/wishlists")
