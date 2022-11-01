@@ -24,12 +24,13 @@
 </header>
 <div class="wrapper">
 
+    <h2><td th:text="${wishlistTitle}"/></h2>
 
     <button onclick="window.location='/addwish';"> + Add wish</button>
     <br>
 
 
-    <tr th:each="wish: ${userWishes}">
+    <tr th:each="wish: ${wishlist}">
 
         <!--<div onclick="window.location='/wishlist';" class="card">
             <div class="cardLogo">
@@ -40,15 +41,26 @@
             </div>
         </div> -->
         <div class="card">
-            <div class="cardLogo">
-                <img src="logo.png" alt="Logo" width="150px">
+            <img src="gavebox.png" alt="Logo" width="60px">
+
+            <div class="info-container">
+                <h3>
+                    <td th:text="${wish.getWishName}"/>
+                </h3>
+                <hr >
+                <div class="text">
+                    <td th:text="${wish.getDescription}"/>
+                </div>
+                <hr>
+                <div class="text">
+                    <td th:text="${wish.getPrice}"/> kr.
+                </div>
+                <hr>
+                    <div class="text">
+                    <td th:text="${wish.getLink}"/>
+                </div>
+                <hr>
             </div>
-
-            <td th:text="${wishlist.getWishName}"/>
-            <td th:text="${wishlist.getDescription}"/>
-            <td th:text="${wishlist.getPrice}"/>
-            <td th:text="${wishlist.getLink}"/>
-
         </div>
 
     </tr>

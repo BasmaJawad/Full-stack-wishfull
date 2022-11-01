@@ -41,7 +41,6 @@ public class homeController {
 
   @PostMapping("/signup")
   public String create(WebRequest req) {
-
     uService.create(req);
 
     return "redirect:/wishlists";
@@ -75,6 +74,7 @@ public class homeController {
   public String viewWishlists(WebRequest req, Model model) {
     model.addAttribute("wishlistTitle", req.getParameter("wishlistTitle"));
 
+    System.out.println(req.getParameter("wishlistTitle"));
     uService.getwService().setWishlistTitle(req.getParameter("wishlistTitle"));
 
     return "redirect:/wishlist"; //skal redirectes til wihlist
@@ -117,10 +117,16 @@ public class homeController {
   public String viewWishlist(Model model) {
 
     model.addAttribute("wishlist", uService.getwService().userWishes());
+    model.addAttribute("wishlistTitle",uService.getwService().getWishlistTitle());
     System.out.println(uService.getwService().userWishes());
+
     return "Wishlist";
   }
 
+  @GetMapping("/test")
+  public String test(){
+    return "test";
+  }
 }
 
 

@@ -41,6 +41,7 @@ public class wishService {
 
     public void createWish(WebRequest req) {
 
+
         // int UserID = 0; //skal ændres
         //int wishlistID = createWishlist(wishlistID);
         Wish wish = new Wish(
@@ -82,10 +83,13 @@ public class wishService {
          this.wishlistTitle = wishlistTitle;
      }
 
+    public String getWishlistTitle() {
+        return wishlistTitle;
+    }
+
     public void editWishlist(){
 
         // Henter wishlist objekt og redigere det og sender det videre til databasen igen
-
 
     }
 }
