@@ -39,7 +39,6 @@ public class homeController {
 
   @PostMapping("/signup")
   public String create(WebRequest req) {
-
     uService.create(req);
 
     return "redirect:/wishlists";

@@ -40,6 +40,7 @@ public class userService {
             id);
 
     userRepo.create(user);
+    wService.findUserID(id);
   }
 
 
