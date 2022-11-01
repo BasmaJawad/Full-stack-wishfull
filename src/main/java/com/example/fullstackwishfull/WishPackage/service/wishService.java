@@ -74,14 +74,13 @@ public class wishService {
     }
 
     public List<Wish> userWishes(){
-        // den skal finde wishlist id efter at have fundet alle listerne for den givne bruger.
-        // Når vi klikker på en titel, skal titlen samt wishlist idet gemmes.
+
         return  wishRepo.findUserWishSQL(userID, wishlistTitle);
     }
 
-    public void setWishlistTitle(String wishlistTitle) {
-        this.wishlistTitle = wishlistTitle;
-    }
+     public void setWishlistTitle(String wishlistTitle) {
+         this.wishlistTitle = wishlistTitle;
+     }
 
     public void editWishlist(){
 

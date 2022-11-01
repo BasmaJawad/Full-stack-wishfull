@@ -50,7 +50,7 @@ public class homeController {
     return "Profile";
   }
 
-
+// ALLE ØNSKELISTER PÅ DISPLAY
   @GetMapping("/wishlists")
   public String viewWishlists(Model model) {
     model.addAttribute("wishlists", uService.getwService().userWishlist());
@@ -67,6 +67,8 @@ public class homeController {
     return "redirect:/wishlist"; //skal redirectes til wihlist
   }
 
+
+  //TILFØJELSE AF ØNSKELISTE POPUP SIDE
   @GetMapping ("/addwishlist")
     public String addWishlist(){
     return "AddWishlist" ;
@@ -102,7 +104,7 @@ public class homeController {
   public String viewWishlist(Model model) {
 
     model.addAttribute("wishlist", uService.getwService().userWishes());
-
+    System.out.println(uService.getwService().userWishes());
     return "Wishlist";
   }
 

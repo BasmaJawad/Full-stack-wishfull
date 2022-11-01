@@ -1,10 +1,22 @@
-h1{
+h2 {
     font-family: "Avenir Next";
+
+
 }
 
-#img-logo{
+h2 {
+    font-size: 300px;
+    margin-bottom: 10px;
+    float: left;
+
+}
+
+
+#img-logo {
     float: left;
     alignment: left;
     margin-top: 18px;
-
 }
+
+
+

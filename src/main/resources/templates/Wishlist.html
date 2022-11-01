@@ -24,34 +24,34 @@
 </header>
 <div class="wrapper">
 
-    <h2>Wishlist Title</h2>
 
     <button onclick="window.location='/addwish';"> + Add wish</button>
     <br>
 
-    <tr th:each="wishlist: ${wishlist}">
 
-    <!--<div onclick="window.location='/wishlist';" class="card">
-        <div class="cardLogo">
-            <img src="logo.png" alt="Logo" width="150px">
+    <tr th:each="wish: ${userWishes}">
+
+        <!--<div onclick="window.location='/wishlist';" class="card">
+            <div class="cardLogo">
+                <img src="logo.png" alt="Logo" width="150px">
+            </div>
+            <div class="info-container">
+                <h3>Title</h3>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="cardLogo">
+                <img src="logo.png" alt="Logo" width="150px">
+            </div>
+
+            <td th:text="${wishlist.getWishName}"/>
+            <td th:text="${wishlist.getDescription}"/>
+            <td th:text="${wishlist.getPrice}"/>
+            <td th:text="${wishlist.getLink}"/>
+
         </div>
-        <div class="info-container">
-            <h3>Title</h3>
-        </div>
-    </div> -->
 
-    <div onclick="window.location='/wishlist';" class="card">
-        <div class="cardLogo">
-            <img src="logo.png" alt="Logo" width="150px">
-        </div>
-        <h3>Title</h3>
-    </div>
-
-
-
-
-
-</div>
+    </tr>
 
 
 </div>

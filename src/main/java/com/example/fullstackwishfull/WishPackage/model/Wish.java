@@ -43,8 +43,6 @@ public class Wish {
     }
 
 
-
-
   public int getUserID() {
         return userID;
     }
