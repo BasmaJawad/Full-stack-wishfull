@@ -69,11 +69,11 @@ public class wishService {
         System.out.println("3 " + wishlistID);
     }
 
-    public List<Wishlist> userWishlist(){ //metode der returnere wishlisten der tilhører brugeren. Bruges i controller
+    public List<Wishlist> userWishlist(){ //Metoden returnerer wishlisten, der tilhører brugeren -> Den bruges i controller
         return wishlistRepo.findUserWishListsSQL(userID);
     }
 
-    public List<Wish> userWishes(){
+    public List<Wish> userWishes(){ //Metoden returnerer wishes, der tilhører brugeren -> Den bruges i controller
 
         return  wishRepo.findUserWishSQL(userID, wishlistTitle);
     }
@@ -86,12 +86,9 @@ public class wishService {
         return wishlistTitle;
     }
 
-    public void editWishlist(){
 
-        // Henter wishlist objekt og redigere det og sender det videre til databasen igen
 
-    }
-
+    // Sletter ønsker
     public void deleteWish(WebRequest req) {
         wishRepo.deleteWish(userID, req);
     }

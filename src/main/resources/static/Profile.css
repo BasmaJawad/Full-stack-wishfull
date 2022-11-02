@@ -32,8 +32,6 @@ body {
     float: left;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-    0 10px 10px rgba(0,0,0,0.22);
     position: center;
     overflow: hidden;
     width: 350px;
@@ -68,6 +66,8 @@ body {
     background-size: cover;
     background-position: 0 0;
     color: #FFFFFF;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
 
 }
 

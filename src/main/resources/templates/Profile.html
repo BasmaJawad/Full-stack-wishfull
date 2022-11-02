@@ -31,7 +31,7 @@
 
     <div class="container" id="container2">
 
-        <h2>HI THERE <br> <output th:text="${loggedUser.getFirstname}"></output> ! <br><br><br>
+        <h2><br>HI THERE <br> <output th:text="${loggedUser.getFirstname}"></output> ! <br><br><br>
         Welcome to <br>your <br>
         profile
         </h2>
@@ -46,22 +46,22 @@
 
 
             <label for="firstname"> Firstname</label>
-            <input type="text" class="form-control" id="firstname" th:value="${loggedUser.getFirstname}"><br>
+            <input type="text" name="firstname" class="form-control" id="firstname" th:value="${loggedUser.getFirstname}"><br>
 
             <label for="surname">Surname</label>
-            <input type="text" class="form-control" id="surname" th:value="${loggedUser.getSurname}"><br>
+            <input type="text" name="surname" class="form-control" id="surname" th:value="${loggedUser.getSurname}"><br>
 
             <label for="eMail">Email</label>
-            <input type="email" class="form-control" id="eMail" th:value="${loggedUser.getEmail}"><br>
+            <input type="email" name="eMail" class="form-control" id="eMail" th:value="${loggedUser.getEmail}"><br>
 
             <label for="phone">Phone</label>
-            <input type="text" class="form-control" id="phone" th:value="${loggedUser.getPhoneNumber}"><br>
+            <input type="text" name="phone" class="form-control" id="phone" th:value="${loggedUser.getPhoneNumber}"><br>
 
             <label for="birthday">Birthday</label>
-            <input type="text" class="form-control" id="birthday" th:value="${loggedUser.getBirthday}"><br>
+            <input type="text" name="birthday" class="form-control" id="birthday" th:value="${loggedUser.getBirthday}"><br>
 
-            <label>New Password</label>
-            <input class="form-control" type="password" placeholder="••••••">
+            <label for="pWord">Password</label>
+            <input type="password" name="pWord" class="form-control" id="passwors" th:value="${loggedUser.getPassword}" placeholder="••••••">
 
             <button type="submit">Submit</button>
 

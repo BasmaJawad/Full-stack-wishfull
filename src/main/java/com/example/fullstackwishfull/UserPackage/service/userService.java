@@ -44,10 +44,11 @@ public class userService {
 
     userRepo.create(user);
     wService.findUserID(id);
+    this.user=user;
   }
 
 
-  //metoden returnere hvilken html side den direct til, afhængig af om loggin er gennemført
+  //Metoden returnerer hvilken html side den skal directer til afhængig af om loggin er gennemført
   public int findUser(WebRequest req, Model model) {
 
     for (User user : allusers()) {
@@ -70,26 +71,24 @@ public class userService {
   }
 
 
+
+  // Vi gør brug af setters, da vi gerne vil opdatere de i java programmet
+  // Repository opdaterer kun databasen
+
   public void updateUserInfo(WebRequest req) {
 
-    userRepo.updateUser(req);
+    user.setPassword(req.getParameter("pWord") );
+    user.setBirthday(req.getParameter("birthday"));
+    user.setPhoneNumber(req.getParameter("phone"));
+    user.setFirstname(req.getParameter("firstname"));
+    user.setSurname(req.getParameter("surname"));
+
+    userRepo.updateUser(user,req);
+
+
   }
 
-  public String updateUserPass(WebRequest req, Model model) {
-
-    for (User user : allusers()) {
-      if (req.getParameter("password").equals(user.getPassword())) {
-        String newPass = "";
-        user.setPassword(newPass);
-
-        return "Succes";
-  } else  {
-        return "FAIL";
-      }
-    }
-    return null;
-  }
-
+  // Vi returnere user for at gøre den tilgangelig i flere metoder
   public User getUser() {
     return user;
   }

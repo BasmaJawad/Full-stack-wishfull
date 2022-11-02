@@ -25,13 +25,13 @@ public class homeController {
     return "Login";
   }
 
-  @PostMapping("/login") //send bruger info til profile
+  @PostMapping("/login") //Send bruger info til profilen
   public String userValidate(WebRequest req, Model model) {
 
     if (uService.findUser(req, model) == 0)
       return "Login";
     else
-      return "Profile";
+      return "redirect:/profile";
 
   }
   @GetMapping("/signup")
@@ -54,9 +54,9 @@ public class homeController {
 
 
   @PostMapping("/profile")
-  public String editProfile(WebRequest req){
+  public String editProfile(WebRequest req, Model model){
+    model.addAttribute("loggedUser", uService.getUser());
     uService.updateUserInfo(req);
-
 
     return "Profile";
   }

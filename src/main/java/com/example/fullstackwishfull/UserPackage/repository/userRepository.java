@@ -65,16 +65,18 @@ public class userRepository {
     }
 
 
-    public void updateUser(WebRequest req){
+    public void updateUser(User user, WebRequest req){
 
         try {
-            PreparedStatement psts = conn.prepareStatement("UPDATE wishfulldb.users SET firstName=?, surName=?, phoneNumber=?, birthday=?, password=?");
+            PreparedStatement psts = conn.prepareStatement("UPDATE wishfulldb.users SET firstName=?, surName=?, phoneNumber=?, birthday=?, password=? where userID =?");
             psts.setString(1, req.getParameter("firstname"));
             psts.setString(2, req.getParameter("surname"));
             psts.setString(3, req.getParameter("phone"));
             psts.setString(4, req.getParameter("birthday") );
-            psts.setString(5, req.getParameter("password") );
+            psts.setString(5, req.getParameter("pWord") );
+            psts.setInt(6, user.getUserID() );
             psts.executeUpdate();
+
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
