@@ -126,7 +126,8 @@ public class homeController {
 
     uService.getwService().deleteWish(req);
 
-    return "wishlist";
+
+    return "redirect:/wishlist";
   }
 
   @GetMapping("/test")

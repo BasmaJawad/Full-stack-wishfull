@@ -1,6 +1,6 @@
 package com.example.fullstackwishfull.WishPackage.repository;
 
-import com.example.fullstackwishfull.DatabaseConnectionManager;
+import com.example.fullstackwishfull.database.DatabaseConnectionManager;
 import com.example.fullstackwishfull.WishPackage.model.Wishlist;
 
 import java.sql.Connection;

@@ -1,9 +1,8 @@
 package com.example.fullstackwishfull.WishPackage.repository;
 
-import com.example.fullstackwishfull.DatabaseConnectionManager;
-import com.example.fullstackwishfull.UserPackage.model.User;
+import com.example.fullstackwishfull.database.DatabaseConnectionManager;
 import com.example.fullstackwishfull.WishPackage.model.Wish;
-import com.example.fullstackwishfull.WishPackage.model.Wishlist;
+import org.springframework.web.context.request.WebRequest;
 
 
 import java.sql.Connection;
@@ -76,7 +75,7 @@ public class wishRepository {
     public List<Wish> findUserWishSQL(int uID , String wTitle  ) {
         List<Wish> userWishes = new ArrayList<>();
         try {
-            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID=? AND wishlistTitle =? ");
+            PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID=? AND wishlistTitle =?");
             psts.setInt(1, uID);
             psts.setString(2, wTitle);
 
@@ -98,5 +97,26 @@ public class wishRepository {
         }
 
         return userWishes;
+    }
+
+    public void deleteWish(int userID, WebRequest req) { //delete wish from sql
+
+        System.out.println("her " + req.getParameter("wishlistID"));
+        System.out.println(req.getParameter("wishName"));
+        System.out.println(userID);
+        try {
+           PreparedStatement psts = conn.prepareStatement("DELETE FROM wishfulldb.allwishes where userID=? AND wishListID =? AND wishName =?");
+
+            psts.setInt(1, userID);
+            psts.setInt(2, Integer.parseInt(req.getParameter("wishlistID")));
+            psts.setString(3, req.getParameter("wishName"));
+
+            psts.executeUpdate();
+
+        }
+        catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

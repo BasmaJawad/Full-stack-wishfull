@@ -1,4 +1,4 @@
-package com.example.fullstackwishfull;
+package com.example.fullstackwishfull.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

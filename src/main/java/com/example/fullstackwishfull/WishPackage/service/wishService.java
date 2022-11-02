@@ -93,6 +93,6 @@ public class wishService {
     }
 
     public void deleteWish(WebRequest req) {
-
+        wishRepo.deleteWish(userID, req);
     }
 }
