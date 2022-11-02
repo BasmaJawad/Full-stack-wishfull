@@ -49,6 +49,10 @@ body {
 
 }
 
+#container2{
+    background-color: transparent;
+}
+
 .form-group{
     background-color: #FFFFFF;
     display: table;
