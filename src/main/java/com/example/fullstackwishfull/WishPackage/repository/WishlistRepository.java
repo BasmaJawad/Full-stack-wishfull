@@ -15,7 +15,7 @@ public class WishlistRepository {
 
     private Connection conn = DatabaseConnectionManager.getConnection();
 
-    public List<Wishlist> findUserWishListsSQL(int id) {
+    public List<Wishlist> findUserWishList(int id) {
         List<Wishlist> userWishlists = new ArrayList<>();
         try {
             PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishlists where userID =?");

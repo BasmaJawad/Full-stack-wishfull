@@ -6,7 +6,6 @@ import com.example.fullstackwishfull.WishPackage.repository.WishlistRepository;
 import com.example.fullstackwishfull.WishPackage.repository.wishRepository;
 import org.springframework.web.context.request.WebRequest;
 
-import java.util.Collections;
 import java.util.List;
 
 
@@ -66,16 +65,15 @@ public class wishService {
         wishlistID = userWishlist().size()+1;
         //wishlistID = wishlistRepo.getUserWishlists().size()+1;
 
-        System.out.println("3 " + wishlistID);
     }
 
     public List<Wishlist> userWishlist(){ //Metoden returnerer wishlisten, der tilhører brugeren -> Den bruges i controller
-        return wishlistRepo.findUserWishListsSQL(userID);
+        return wishlistRepo.findUserWishList(userID);
     }
 
     public List<Wish> userWishes(){ //Metoden returnerer wishes, der tilhører brugeren -> Den bruges i controller
 
-        return  wishRepo.findUserWishSQL(userID, wishlistTitle);
+        return  wishRepo.findUserWishes(userID, wishlistTitle);
     }
 
      public void setWishlistTitle(String wishlistTitle) {

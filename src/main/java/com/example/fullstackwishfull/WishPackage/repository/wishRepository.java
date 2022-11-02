@@ -72,7 +72,7 @@ public class wishRepository {
 
     }
 
-    public List<Wish> findUserWishSQL(int uID , String wTitle  ) {
+    public List<Wish> findUserWishes(int uID , String wTitle  ) {
         List<Wish> userWishes = new ArrayList<>();
         try {
             PreparedStatement psts = conn.prepareStatement("SELECT * FROM wishfulldb.allwishes where userID=? AND wishlistTitle =?");
@@ -101,9 +101,6 @@ public class wishRepository {
 
     public void deleteWish(int userID, WebRequest req) { //delete wish from sql
 
-        System.out.println("her " + req.getParameter("wishlistID"));
-        System.out.println(req.getParameter("wishName"));
-        System.out.println(userID);
         try {
            PreparedStatement psts = conn.prepareStatement("DELETE FROM wishfulldb.allwishes where userID=? AND wishListID =? AND wishName =?");
 

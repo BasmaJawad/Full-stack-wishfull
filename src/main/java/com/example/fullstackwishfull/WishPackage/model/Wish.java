@@ -24,25 +24,6 @@ public class Wish {
         this.description = description;
     }
 
-    public Wish(int userID, int wishListID, String wishName, String price, String link, String description) {
-        this.userID = userID;
-        this.wishListID = wishListID;
-        this.wishName = wishName;
-        this.price = price;
-        this.link = link;
-        this.description = description;
-    }
-
-    public Wish(int WLid, String wishListTitle, String wishName, String price, String link, String description) {
-        this.wishListID = WLid;
-        this.wishlistTitle = wishListTitle;
-        this.wishName = wishName;
-        this.price = price;
-        this.link = link;
-        this.description = description;
-    }
-
-
   public int getUserID() {
         return userID;
     }
