@@ -69,6 +69,12 @@ public class userService {
     return 0;
   }
 
+
+  public void updateUserInfo(WebRequest req) {
+
+    userRepo.updateUser(req);
+  }
+
   public String updateUserPass(WebRequest req, Model model) {
 
     for (User user : allusers()) {
@@ -87,6 +93,8 @@ public class userService {
   public User getUser() {
     return user;
   }
+
+
 
 }
 

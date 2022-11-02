@@ -54,8 +54,9 @@ public class homeController {
 
 
   @PostMapping("/profile")
-  public String editProfile(WebRequest req, Model model){
-    uService.updateUserPass(req, model);
+  public String editProfile(WebRequest req){
+    uService.updateUserInfo(req);
+
 
     return "Profile";
   }

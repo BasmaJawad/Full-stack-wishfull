@@ -2,6 +2,7 @@ package com.example.fullstackwishfull.UserPackage.repository;
 
 import com.example.fullstackwishfull.database.DatabaseConnectionManager;
 import com.example.fullstackwishfull.UserPackage.model.User;
+import org.springframework.web.context.request.WebRequest;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -64,6 +65,35 @@ public class userRepository {
     }
 
 
+    public void updateUser(WebRequest req){
+
+        try {
+            PreparedStatement psts = conn.prepareStatement("UPDATE wishfulldb.users SET firstName=?, surName=?, phoneNumber=?, birthday=?, password=?");
+            psts.setString(1, req.getParameter("firstname"));
+            psts.setString(2, req.getParameter("surname"));
+            psts.setString(3, req.getParameter("phone"));
+            psts.setString(4, req.getParameter("birthday") );
+            psts.setString(5, req.getParameter("password") );
+            psts.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+
+
+    }
+
+
+
+
 
 
 }
+
+
+
+
