@@ -17,10 +17,7 @@ CREATE TABLE IF NOT EXISTS users
 INSERT INTO users(firstName, surName, email, password, birthday, phoneNumber, userID)
 VALUES ('Mahi', 'Yoga','m@gmail.com','mahi123','16/11/2002', 20908070,1000 );
 
-
-
-SELECT * FROM users;
-
+delete from allwishlists where userID=0;
 
 
 

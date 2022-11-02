@@ -1,6 +1,6 @@
 package com.example.fullstackwishfull.UserPackage.repository;
 
-import com.example.fullstackwishfull.DatabaseConnectionManager;
+import com.example.fullstackwishfull.database.DatabaseConnectionManager;
 import com.example.fullstackwishfull.UserPackage.model.User;
 
 import java.sql.Connection;
