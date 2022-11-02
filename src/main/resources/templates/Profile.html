@@ -30,15 +30,18 @@
 
     <div class="container" id="container2">
 
-    <h2>HI THERE <br> <output th:text="${loggedUser.getFirstname}"></output> ! <br><br><br>
+        <h2>HI THERE <br> <output th:text="${loggedUser.getFirstname}"></output> ! <br><br><br>
         Welcome to <br>your <br>
         profile
-    </h2>
+        </h2>
     </div>
 
     <div class="container">
 
         <div class="form-group">
+
+
+        <form action="/profile" method ="post">
 
 
             <label for="firstname"> Firstname</label>
@@ -56,15 +59,16 @@
             <label for="birthday">Birthday</label>
             <input type="text" class="form-control" id="birthday" th:value="${loggedUser.getBirthday}"><br>
 
-            <label>Current Password</label>
-            <input class="form-control" type="password" placeholder="••••••">
-
             <label>New Password</label>
             <input class="form-control" type="password" placeholder="••••••">
 
             <button type="submit">Submit</button>
 
+
+        </form>
+
         </div>
+
     </div>
 
 </div>
