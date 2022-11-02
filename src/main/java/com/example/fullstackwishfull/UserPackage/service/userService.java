@@ -12,8 +12,11 @@ import java.util.List;
 
 public class userService {
 
+
   private final userRepository userRepo = new userRepository();
   private final wishService wService = new wishService();
+
+  private User user;
 
 
   public wishService getwService() {
@@ -53,6 +56,8 @@ public class userService {
 
         wService.findUserID(user.getUserID()); //ender id til wish service
 
+        this.user = user; //sætter user, så vi kan hente den til Profile html
+
         model.addAttribute("loggedUser", user);//sender user videre til html, ved navn loggedUser
 
         return user.getUserID();
@@ -79,6 +84,9 @@ public class userService {
     return null;
   }
 
+  public User getUser() {
+    return user;
+  }
 
 }
 

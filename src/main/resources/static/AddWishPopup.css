@@ -1,8 +1,8 @@
 
-.bg{
+.bg {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -11,19 +11,19 @@
     align-items: center;
 }
 
-.box1{
+.box1 {
     position: absolute;
     width: 50%;
     height: 100%;
     float: left;
-  color: black;
+    color: black;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.box2{
-    background: -webkit-linear-gradient(to right, #2e387d   ,#4e5ebd);
-    background: linear-gradient(to right, #2e387d  , #4e5ebd  );
+.box2 {
+    background: -webkit-linear-gradient(to right, #2e387d, #4e5ebd);
+    background: linear-gradient(to right, #2e387d, #4e5ebd);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     position: absolute;
@@ -33,7 +33,7 @@
     float: left;
 }
 
-.popup-box{
+.popup-box {
     width: 700px;
     height: 450px;
     background-color: white;
@@ -43,12 +43,12 @@
 
 }
 
-#newList{
+#newList {
     font-weight: bold;
     font-size: 30px;
 }
 
-input{
+input {
     width: 60%;
     height: 40px;
     display: block;
@@ -58,7 +58,7 @@ input{
 
 }
 
-.CreateButton{
+.CreateButton {
     border-radius: 5px;
     background-color: #2e387d;
     color: #FFFFFF;
@@ -69,8 +69,17 @@ input{
     text-transform: uppercase;
 
 }
+img{
+    position: absolute;
+    top: 50px;
+    left: 35%;
+    margin-top: 50px;
+}
 
-.close{
+p{
+    padding: 20px;
+}
+.close {
 
     position: absolute;
     top: 0;

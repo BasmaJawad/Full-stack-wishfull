@@ -47,7 +47,8 @@ public class homeController {
   }
 
   @GetMapping("/profile")
-  public String profile() {
+  public String profile(Model model) {
+    model.addAttribute("loggedUser", uService.getUser());
     return "Profile";
   }
 
@@ -55,7 +56,6 @@ public class homeController {
   @PostMapping("/profile")
   public String editProfile(WebRequest req, Model model){
     uService.updateUserPass(req, model);
-
 
     return "Profile";
   }
