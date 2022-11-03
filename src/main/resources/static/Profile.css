@@ -1,14 +1,14 @@
-body{}
-
-
-h2 {
-    font-family: "Avenir Next";
-
-
-
+body {
+    margin: 0;
+    padding-top: 40px;
+    color: #2e323c;
+    background-color: #f5f4f1;
+    position: relative;
+    height: 100%;
 }
 
 h2 {
+    font-family: "Avenir Next";
     margin-top: 80px;
     font-size: 40px;
     margin-bottom: 10px;
@@ -19,14 +19,7 @@ h2 {
     letter-spacing: 2px;
 }
 
-body {
-    margin: 0;
-    padding-top: 40px;
-    color: #2e323c;
-    background: #f5f6fa;
-    position: relative;
-    height: 100%;
-}
+
 .container {
 
     float: left;
@@ -47,10 +40,6 @@ body {
     height: 657px;
 
 
-}
-
-#container2{
-    background-color: transparent;
 }
 
 .form-group{
