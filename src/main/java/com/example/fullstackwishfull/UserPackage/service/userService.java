@@ -28,7 +28,7 @@ public class userService {
   }
 
 
-  public int generateID() { //udregner id til næste user ved at tage size og paluser det med 1000 da den første id startede på 1000
+  public int generateID() { //udregner id til næste user ved at tage size og plusser det med 1000 da den første id startede på 1000
     return allusers().size() + 1000;
   }
 
@@ -48,7 +48,7 @@ public class userService {
   }
 
 
-  //Metoden returnerer hvilken html side den skal directer til afhængig af om loggin er gennemført
+  //Metoden returnerer hvilken html side den skal videreføre til afhængig af om Log in er gennemført
   public int findUser(WebRequest req, Model model) {
 
     for (User user : allusers()) {
@@ -88,7 +88,7 @@ public class userService {
 
   }
 
-  // Vi returnere user for at gøre den tilgangelig i flere metoder
+  // Vi returnere user for at gøre den tilgængelig i flere metoder
   public User getUser() {
     return user;
   }

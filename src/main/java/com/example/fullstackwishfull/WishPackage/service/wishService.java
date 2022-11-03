@@ -23,8 +23,6 @@ public class wishService {
 
     public void createWishlist(WebRequest req) {
 
-        // wishRepo.setNewWishlistTitle(String.valueOf(req.getParameter("title")));
-        //return req.getParameter("wishlistTitle");
 
         Wishlist wishlist = new Wishlist(
                 userID,
@@ -40,8 +38,6 @@ public class wishService {
 
     public void createWish(WebRequest req) {
 
-        // int UserID = 0; //skal ændres
-        //int wishlistID = createWishlist(wishlistID);
         Wish wish = new Wish(
                 userID,
                 wishlistID,
@@ -60,14 +56,14 @@ public class wishService {
 
     }
 
-    public void generateID() {//udregner id til næste wishlist ved at tage size og paluser det med 1000 da den første id startede på 1000
+    public void generateID() {//udregner id til næste ønskeliste ved at tage size og plusser det med 1000, da det første id startede på 1000
 
         wishlistID = userWishlist().size()+1;
         //wishlistID = wishlistRepo.getUserWishlists().size()+1;
 
     }
 
-    public List<Wishlist> userWishlist(){ //Metoden returnerer wishlisten, der tilhører brugeren -> Den bruges i controller
+    public List<Wishlist> userWishlist(){ //Metoden returnerer ønskelisten, der tilhører brugeren -> Den bruges i controller
         return wishlistRepo.findUserWishList(userID);
     }
 
