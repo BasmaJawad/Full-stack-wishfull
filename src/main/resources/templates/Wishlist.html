@@ -36,7 +36,7 @@
     <tr th:each="wish: ${wishlist}">
 
         <div class="card">
-            <form class="trash"method="post">
+            <form class="trash" method="post">
                 <input type="hidden" name="wishlistID" th:value="${wish.getWishListID}">
                 <input type="hidden" name="wishName" th:value="${wish.getWishName}">
                 <input type="image" class="submitImg" src="trashcan.png" width="30px">
